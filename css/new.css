@@ -5,3 +5,35 @@
   min-width: 100%;
   min-height: 100%;
 }
+
+.button-about{
+  margin-top: 2rem;
+  
+  background: transparent !important;
+  color: #009e66 !important;
+  border: 1px solid #009e66 !important;
+}
+
+.button-about:hover{
+  background: white !important;
+}
+
+.button-main {
+  background-color: #fff;
+  border: 1px solid #009e66 ;
+  border-radius: 30px;
+  color: #009e66 ;
+  font-size: 14px;
+  padding: 10px 35px;
+}
+
+.button-scheme{
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+
+.button-main:hover{
+  background: white !important;
+  color: #009e66 ;
+}
