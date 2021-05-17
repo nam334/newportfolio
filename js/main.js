@@ -56,6 +56,40 @@
           },
         });
       }),
+
+      e('.btn-home[href^="#"]').each(function () {
+        e(this).animatedModal({
+          animatedIn: "fadeIn",
+          animatedOut: "fadeOut",
+          animationDuration: "0s",
+          beforeOpen: function () {
+            e("#overlay-effect")
+              .addClass("animate-up")
+              .removeClass("animate-down"),
+              e("#" + this.modalTarget).css({
+                animationDelay: ".5s",
+                animationFillMode: "both",
+              });
+          },
+          afterOpen: function () {
+            e("#" + this.modalTarget).css({ animationFillMode: "none" });
+          },
+          beforeClose: function () {
+            e("#overlay-effect")
+              .addClass("animate-down")
+              .removeClass("animate-up"),
+              e("#" + this.modalTarget).css({
+                animationDelay: ".5s",
+                animationFillMode: "both",
+              });
+          },
+          afterClose: function () {
+            e("#" + this.modalTarget).css({ animationFillMode: "none" });
+          },
+        });
+      }),
+
+
       e(".lightbox-wrapper").each(function () {
         e('.navbar .navbar-nav .nav-link[href^="#' + this.id + '"]').length ||
           e(this).hide();
